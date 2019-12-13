@@ -22,7 +22,7 @@ def read_csv(csv_path):
     return tasks
 
 def filter_tickets(tickets):
-    skip_resolutions = {"Duplicate", "Won\'t Fix", "Works as Designed", "Gone away"}
+    skip_resolutions = {"Duplicate", "Won\'t Fix", "Works as Designed", "Gone away", "Declined", "Won\'t Do"}
     return [ticket for ticket in tickets if ticket['Resolution'] not in skip_resolutions]
 
 def pp_tickets(tickets):
